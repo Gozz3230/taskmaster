@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TaskMaster</string>
+    <string name="product_name">Product Name</string>
+    <string name="all_tasks">All Tasks</string>
+    <string name="add_task">Add Task</string>
+    <string name="input_product_name">Input Product Name</string>
+    <string name="name">Name</string>
+    <string name="tasks">Tasks</string>
+    <string name="myTasks">My Tasks</string>
+    <string name="taskTitle">Task Title</string>
+    <string name="taskDescription">Task Description</string>
+    <string name="totalTasks">Total Tasks: 0</string>
+    <string name="addTask">Add Task</string>
+    <string name="newTask">New Task</string>
+    <string name="doSomething">Do Something</string>
+    <string name="submitted">Submitted!</string>
+    <string name="submitted_label">Submitted!</string>
+    <string name="submitTask">Submit</string>
+    <string name="userName">Username</string>
+    <string name="saveButton">Save</string>
+    <string name="loremIpsum">Lorum Ipsum blah blah blah</string>
+    <string name="selectedTasksTitle">Selected Task\'s Title</string>
+    <string name="enterUsername">Enter Username</string>
+    <string name="username">Username</string>
+    <string name="save">Save</string>
+</resources>
