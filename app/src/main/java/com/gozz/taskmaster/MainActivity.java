@@ -21,6 +21,7 @@ import com.gozz.taskmaster.activities.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity {
   private final String TAG = "MainActivity";
+  public static final String PRODUCT_NAME_EXTRA_TAG = "productName";
   SharedPreferences preferences;
   
   @Override
