@@ -29,14 +29,14 @@ public class AllTasksActivity extends AppCompatActivity {
     Intent callingIntent = getIntent();
     String taskTitleString = null;
     if(callingIntent != null) {
-      taskTitleString = callingIntent.getStringExtra(MainActivity.TASK_TITLE_EXTRA_TAG)
+      taskTitleString = callingIntent.getStringExtra(MainActivity.TASK_TITLE_EXTRA_TAG);
     }
     
     TextView taskTitleTextView = (TextView) findViewById(R.id.allTasksActivityTaskTitleTextView);
-    if(taskTitleString != null) {
+    if(taskTitleString != null && !taskTitleString.equals("")) {
       taskTitleTextView.setText(taskTitleString);
     } else {
-    
+    taskTitleTextView.setText(R.string.no_task_name);
     }
   }
   
