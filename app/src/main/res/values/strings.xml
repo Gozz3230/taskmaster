@@ -23,4 +23,6 @@
     <string name="enterUsername">Enter Username</string>
     <string name="username">Username</string>
     <string name="save">Save</string>
+    <string name="mainActivityInputTaskTitleTextView">Input Task Title</string>
+    <string name="no_task_name">No Task</string>
 </resources>

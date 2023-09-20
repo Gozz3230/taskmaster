@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,7 +22,7 @@ import com.gozz.taskmaster.activities.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity {
   private final String TAG = "MainActivity";
-  public static final String PRODUCT_NAME_EXTRA_TAG = "productName";
+  public static final String TASK_TITLE_EXTRA_TAG = "taskTitle";
   SharedPreferences preferences;
   
   @Override
@@ -89,17 +90,14 @@ public class MainActivity extends AppCompatActivity {
     void setupAllTasksButton() {
       Button allTasksButton = findViewById(R.id.MainActivityAllTasksButton);
       allTasksButton.setOnClickListener(v -> {
-        System.out.println("All Tasks button was pressed");
+        // grabbing product name from edittext view
+        String taskTitle = ((EditText)findViewById(R.id.mainActivityInputTaskTitleTextView)).getText().toString();
         
-        Log.v(TAG, "I'm a VERBOSE log!");
-        Log.d(TAG, "I'm a DEBUG log");
-        Log.i(TAG, "I'm an INFO log");
-        Log.w(TAG, "I'm a WARNING log");
-        Log.e(TAG, "I'm an ERROR log");
-        Log.wtf(TAG, "WHAT A TERRIBLE FAILURE");
-        
+        // creating intent and putting an extra value
         Intent goToAllTasksFormIntent = new Intent(MainActivity.this, AllTasksActivity.class);
+        goToAllTasksFormIntent.putExtra(TASK_TITLE_EXTRA_TAG, taskTitle);
       
+        // trigger the intent
         startActivity(goToAllTasksFormIntent);
       });
   }
