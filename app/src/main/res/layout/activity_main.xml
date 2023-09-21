@@ -10,41 +10,33 @@
         android:id="@+id/MainActivityLabelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
         android:text="@string/myTasks"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/MainActivityImageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MainActivityUsernameTextView" />
 
     <Button
         android:id="@+id/MainActivityAllTasksButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/all_tasks"
-        app:layout_constraintBottom_toBottomOf="@+id/MainActivityAddTaskButton"
-        app:layout_constraintEnd_toEndOf="@+id/MainActivityImageView" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/MainActivityAddTaskButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginBottom="24dp"
         android:text="@string/add_task"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/MainActivityImageView" />
-
-    <ImageView
-        android:id="@+id/MainActivityImageView"
-        android:layout_width="296dp"
-        android:layout_height="225dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:contentDescription="@string/tasks"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainActivityLabelTextView"
-        app:srcCompat="@android:drawable/ic_dialog_info" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -73,10 +65,41 @@
         android:id="@+id/MainActivityUsernameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:text="@string/username"
         android:textSize="34sp"
-        app:layout_constraintStart_toStartOf="@+id/MainActivityLabelTextView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <Button
+        android:id="@+id/mainActivityFirstTaskTitleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/washDishesTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MainActivityLabelTextView" />
+
+    <Button
+        android:id="@+id/mainActivitySecondTaskTitleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/mowLawnTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainActivityFirstTaskTitleButton" />
+
+    <Button
+        android:id="@+id/mainActivityThirdTaskTitleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/cookDinnerTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainActivitySecondTaskTitleButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
