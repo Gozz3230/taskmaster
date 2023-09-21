@@ -22,22 +22,7 @@ public class AllTasksActivity extends AppCompatActivity {
     setSupportActionBar(toolbar);
   
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    setupTaskTitleTextView();
-  }
-  
-  void setupTaskTitleTextView() {
-    Intent callingIntent = getIntent();
-    String taskTitleString = null;
-    if(callingIntent != null) {
-      taskTitleString = callingIntent.getStringExtra(MainActivity.TASK_TITLE_EXTRA_TAG);
-    }
     
-    TextView taskTitleTextView = (TextView) findViewById(R.id.allTasksActivityTaskTitleTextView);
-    if(taskTitleString != null && !taskTitleString.equals("")) {
-      taskTitleTextView.setText(taskTitleString);
-    } else {
-    taskTitleTextView.setText(R.string.no_task_name);
-    }
   }
   
   @Override

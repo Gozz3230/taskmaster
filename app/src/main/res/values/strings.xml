@@ -25,4 +25,7 @@
     <string name="save">Save</string>
     <string name="mainActivityInputTaskTitleTextView">Input Task Title</string>
     <string name="no_task_name">No Task</string>
+    <string name="washDishesTask">Wash Dishes</string>
+    <string name="mowLawnTask">Mow Lawn</string>
+    <string name="cookDinnerTask">Cook Dinner</string>
 </resources>
