@@ -28,4 +28,7 @@
     <string name="washDishesTask">Wash Dishes</string>
     <string name="mowLawnTask">Mow Lawn</string>
     <string name="cookDinnerTask">Cook Dinner</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="blankTaskName">Blank Task Name</string>
 </resources>

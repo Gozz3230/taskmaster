@@ -10,16 +10,17 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.gozz.taskmaster.activities.AddTaskActivity;
 import com.gozz.taskmaster.activities.AllTasksActivity;
 import com.gozz.taskmaster.activities.SettingsActivity;
-import com.gozz.taskmaster.activities.TaskDetailActivity;
+import com.gozz.taskmaster.adapters.TaskListRecyclerViewAdapter;
 
 public class MainActivity extends AppCompatActivity {
   private final String TAG = "MainActivity";
@@ -39,9 +40,7 @@ public class MainActivity extends AppCompatActivity {
     setupSettingsImage();
     setupAddTaskFormButton();
     setupAllTasksButton();
-    setupFirstTaskTitleButton();
-    setupSecondTaskTitleButton();
-    setupThirdTaskTitleButton();
+    setupRecyclerView();
   }
   
   @Override
@@ -109,45 +108,18 @@ public class MainActivity extends AppCompatActivity {
     });
   }
   
-  void setupFirstTaskTitleButton() {
-    Button firstTaskTitleButton = findViewById(R.id.mainActivityFirstTaskTitleButton);
-    firstTaskTitleButton.setOnClickListener(v -> {
-      String taskTitle = ((Button) findViewById(R.id.mainActivityFirstTaskTitleButton)).getText().toString();
-      
-      Intent goToTaskDetailFormIntent = new Intent(MainActivity.this, TaskDetailActivity.class);
-      goToTaskDetailFormIntent.putExtra(TASK_TITLE_EXTRA_TAG, taskTitle);
-      
-      startActivity(goToTaskDetailFormIntent);
-    });
-  }
-  
-    void setupSecondTaskTitleButton() {
-      Button SecondTaskTitleButton = findViewById(R.id.mainActivitySecondTaskTitleButton);
-      SecondTaskTitleButton.setOnClickListener(v -> {
-        // grabbing product name from edittext view
-        String taskTitle = ((Button) findViewById(R.id.mainActivitySecondTaskTitleButton)).getText().toString();
-  
-        // creating intent and putting an extra value
-        Intent goToTaskDetailFormIntent = new Intent(MainActivity.this, TaskDetailActivity.class);
-        goToTaskDetailFormIntent.putExtra(TASK_TITLE_EXTRA_TAG, taskTitle);
-  
-        // trigger the intent
-        startActivity(goToTaskDetailFormIntent);
-      });
-    }
+  void setupRecyclerView() {
+    // Grab recycler view
+    RecyclerView TaskListRecyclerView = (RecyclerView) findViewById(R.id.MainActivityTaskRecyclerView);
     
-      void setupThirdTaskTitleButton() {
-        Button thirdTaskTitleButton = findViewById(R.id.mainActivityThirdTaskTitleButton);
-        thirdTaskTitleButton.setOnClickListener(v -> {
-          // grabbing product name from edittext view
-          String taskTitle = ((Button) findViewById(R.id.mainActivityThirdTaskTitleButton)).getText().toString();
-        
-          // creating intent and putting an extra value
-          Intent goToTaskDetailFormIntent = new Intent(MainActivity.this, TaskDetailActivity.class);
-          goToTaskDetailFormIntent.putExtra(TASK_TITLE_EXTRA_TAG, taskTitle);
-        
-          // trigger the intent
-          startActivity(goToTaskDetailFormIntent);
-        });
+    // set layout manager to linear layout manager:
+    // ((LinearLayoutManager)layoutManager).setOrientation(LinearLayoutManager.HORIZONTAL);
+    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+    // for horizontal list
+    TaskListRecyclerView.setLayoutManager(layoutManager);
+  
+    TaskListRecyclerViewAdapter adapter = new TaskListRecyclerViewAdapter();
+    taskListRecyclerView.setAdapter(adapter);
   }
+  
 }
