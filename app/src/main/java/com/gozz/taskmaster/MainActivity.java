@@ -110,13 +110,13 @@ public class MainActivity extends AppCompatActivity {
   
   void setupRecyclerView() {
     // Grab recycler view
-    RecyclerView TaskListRecyclerView = (RecyclerView) findViewById(R.id.MainActivityTaskRecyclerView);
+    RecyclerView taskListRecyclerView = (RecyclerView) findViewById(R.id.MainActivityTaskRecyclerView);
     
     // set layout manager to linear layout manager:
     // ((LinearLayoutManager)layoutManager).setOrientation(LinearLayoutManager.HORIZONTAL);
     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
     // for horizontal list
-    TaskListRecyclerView.setLayoutManager(layoutManager);
+    taskListRecyclerView.setLayoutManager(layoutManager);
   
     TaskListRecyclerViewAdapter adapter = new TaskListRecyclerViewAdapter();
     taskListRecyclerView.setAdapter(adapter);

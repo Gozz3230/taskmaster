@@ -73,6 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/MainActivityTaskRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="24dp"
