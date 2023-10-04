@@ -16,8 +16,8 @@ public class TaskListRecyclerViewAdapter extends RecyclerView.Adapter {
   @Override
   public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
     // Inflate the fragment(add fragment to viewHolder)
-    View productFragment = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_task_list, parent, false);
-    return null;
+    View taskFragment = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_task_list, parent, false);
+    return new TaskListViewHolder(taskFragment);
   }
   
   @Override
@@ -27,6 +27,13 @@ public class TaskListRecyclerViewAdapter extends RecyclerView.Adapter {
   
   @Override
   public int getItemCount() {
-    return 0;
+    return 100;
+  }
+  
+  public static class TaskListViewHolder extends RecyclerView.ViewHolder {
+  
+    public TaskListViewHolder(@NonNull View itemView) {
+      super(itemView);
+    }
   }
 }
