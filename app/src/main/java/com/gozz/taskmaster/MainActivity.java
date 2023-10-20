@@ -129,7 +129,8 @@ public class MainActivity extends AppCompatActivity {
     taskListRecyclerView.setLayoutManager(layoutManager);
 
 //    TaskListRecyclerViewAdapter adapter = new TaskListRecyclerViewAdapter();
-    TaskListRecyclerViewAdapter adapter = new TaskListRecyclerViewAdapter(tasks);
+//    TaskListRecyclerViewAdapter adapter = new TaskListRecyclerViewAdapter(tasks);
+    TaskListRecyclerViewAdapter adapter = new TaskListRecyclerViewAdapter(tasks, this);
     taskListRecyclerView.setAdapter(adapter);
   }
   
